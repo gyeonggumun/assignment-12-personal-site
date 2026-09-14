@@ -16,7 +16,7 @@
       <a href="#story">이야기</a>
       <a href="#evidence">기록</a>
       <a href="#works">대표작</a>
-      <a href="#documents">문서</a>
+      <a href="self-introduction.html">자기소개서</a>
       <a href="#updater">새 기록</a>
     </nav>
   </header>
@@ -30,9 +30,8 @@
         <p class="hero-intro">시스템의 오류를 혼자 끌어안기보다 함께 나눌 때 더 빠르고 정확하게 풀린다는 사실을, 실제 구축과 협업의 장면으로 증명해 왔습니다.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#story">3분 이야기 읽기</a>
-          <a class="button button-quiet" href="#documents">지원 문서 보기</a>
+          <a class="button button-quiet" href="self-introduction.html">자기소개서 읽기 ↗</a>
         </div>
-        <p class="contact-note"><strong>연락 수단</strong> 공개용 이메일을 입력해 주세요 <span>·</span> 공개 전 이 문구를 본인의 연락처로 교체합니다.</p>
       </div>
       <aside class="hero-aside" aria-label="핵심 역량 요약">
         <p class="aside-label">HOW I WORK</p>
@@ -76,18 +75,8 @@
       </div>
     </section>
 
-    <section class="documents section-shell" id="documents" aria-labelledby="documents-title">
-      <div class="section-heading"><p class="eyebrow">04 · APPLICATION KIT</p><h2 id="documents-title">바로 보낼 수 있는<br>지원 문서</h2></div>
-      <div class="document-grid">
-        <a class="document-card" href="docs/resume.md" download><span>01</span><div><h3>이력서</h3><p>이름·핵심 역량·과제와 기간을 한 장에 정리했습니다.</p></div><b>↓</b></a>
-        <a class="document-card" href="docs/self-introduction.md" download><span>02</span><div><h3>자기소개서</h3><p>이 사이트의 본편인 1,500자 안팎 성장 서사입니다.</p></div><b>↓</b></a>
-        <a class="document-card" href="docs/career-description.md" download><span>03</span><div><h3>경력기술서</h3><p>과제마다 상황·행동·결과와 해당 역량을 표시했습니다.</p></div><b>↓</b></a>
-      </div>
-      <p class="document-note">문서는 지원처에 맞춰 연락 수단과 기록 수치를 최종 확인한 뒤 제출합니다.</p>
-    </section>
-
     <section class="updater section-shell" id="updater" aria-labelledby="updater-title">
-      <div class="section-heading"><p class="eyebrow">05 · KEEP WRITING</p><h2 id="updater-title">새 기록을 넣으면<br>사이트가 다시 씁니다</h2></div>
+      <div class="section-heading"><p class="eyebrow">04 · KEEP WRITING</p><h2 id="updater-title">새 기록을 넣으면<br>사이트가 다시 씁니다</h2></div>
       <div class="updater-content">
         <div class="updater-copy"><p class="section-lead">리추얼 기록·과제 목록·출석 숫자를 한 번에 붙여 넣으세요. 브라우저 안에서만 계산하며, 같은 입력은 언제나 같은 숫자와 문단 후보를 만듭니다. 승인하기 전에는 사이트 본문을 바꾸지 않습니다.</p><ol class="steps"><li><b>CSV 입력</b><span>week, attendance, ritual, submission 열을 사용합니다.</span></li><li><b>결과 생성</b><span>출석률·기록률·제출률과 역량별 후보를 계산합니다.</span></li><li><b>검토 후 반영</b><span>날짜·근거를 확인한 문장만 문서에 옮깁니다.</span></li></ol></div>
         <div class="tool-panel"><label for="records-input">13주 기록 CSV</label><textarea id="records-input" rows="8" spellcheck="false" placeholder="week,attendance,ritual,submission,evidence\n1,1,1,0,환경 세팅\n2,1,1,1,오류 로그 분석"></textarea><div class="tool-actions"><button class="button button-primary" id="load-example" type="button">예시 불러오기</button><button class="button button-dark" id="generate" type="button">결과 만들기</button></div><p class="tool-status" id="tool-status" role="status">개인정보가 포함된 원문 일기는 붙여 넣지 마세요.</p><div class="generated-result" id="generated-result" hidden></div></div>
