@@ -4,7 +4,9 @@
 
 ## 공개 사이트
 
-배포가 완료되면 이 저장소의 Vercel 프로젝트 URL을 결과물 URL로 제출합니다. 사이트에는 로그인·댓글·방문자 통계를 넣지 않았습니다.
+결과물 URL: https://gyeonggumun.github.io/assignment-12-personal-site/
+
+GitHub Pages로 배포된 정적 사이트이며, 로그인·댓글·방문자 통계를 넣지 않았습니다. Vercel은 GitHub 연동 승인이 필요한 선택 배포 경로로 남겨 두었습니다.
 
 ## 체크리스트 대응
 
