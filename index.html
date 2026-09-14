@@ -17,6 +17,7 @@
       <a href="#evidence">기록</a>
       <a href="#works">대표작</a>
       <a href="self-introduction.html">자기소개서</a>
+      <a href="#documents">문서</a>
       <a href="#updater">새 기록</a>
     </nav>
   </header>
@@ -75,17 +76,24 @@
       </div>
     </section>
 
+    <section class="documents section-shell" id="documents" aria-labelledby="documents-title">
+      <div class="section-heading"><p class="eyebrow">04 · APPLICATION FILES</p><h2 id="documents-title">필요한 문서를<br>바로 내려받기</h2></div>
+      <div class="document-grid">
+        <a class="document-card" href="docs/resume.md" download><span>01</span><div><h3>이력서</h3><p>핵심 역량과 과제 경험을 한 장에 정리했습니다.</p></div><b>↓</b></a>
+        <a class="document-card" href="docs/self-introduction.md" download><span>02</span><div><h3>자기소개서</h3><p>별도 읽기 페이지와 동일한 자기소개서 원문입니다.</p></div><b>↓</b></a>
+        <a class="document-card" href="docs/career-description.md" download><span>03</span><div><h3>경력기술서</h3><p>과제별 상황·행동·결과와 연결 역량을 담았습니다.</p></div><b>↓</b></a>
+      </div>
+      <p class="document-note">파일을 클릭하면 Markdown 문서가 다운로드됩니다. 제출 전 공개 연락 수단과 실제 기록 수치를 확인합니다.</p>
+    </section>
+
     <section class="updater section-shell" id="updater" aria-labelledby="updater-title">
-      <div class="section-heading"><p class="eyebrow">04 · KEEP WRITING</p><h2 id="updater-title">새 기록을 넣으면<br>사이트가 다시 씁니다</h2></div>
+      <div class="section-heading"><p class="eyebrow">05 · KEEP WRITING</p><h2 id="updater-title">새 기록을 넣으면<br>사이트가 다시 씁니다</h2></div>
       <div class="updater-content">
         <div class="updater-copy"><p class="section-lead">리추얼 기록·과제 목록·출석 숫자를 한 번에 붙여 넣으세요. 브라우저 안에서만 계산하며, 같은 입력은 언제나 같은 숫자와 문단 후보를 만듭니다. 승인하기 전에는 사이트 본문을 바꾸지 않습니다.</p><ol class="steps"><li><b>CSV 입력</b><span>week, attendance, ritual, submission 열을 사용합니다.</span></li><li><b>결과 생성</b><span>출석률·기록률·제출률과 역량별 후보를 계산합니다.</span></li><li><b>검토 후 반영</b><span>날짜·근거를 확인한 문장만 문서에 옮깁니다.</span></li></ol></div>
         <div class="tool-panel"><label for="records-input">13주 기록 CSV</label><textarea id="records-input" rows="8" spellcheck="false" placeholder="week,attendance,ritual,submission,evidence\n1,1,1,0,환경 세팅\n2,1,1,1,오류 로그 분석"></textarea><div class="tool-actions"><button class="button button-primary" id="load-example" type="button">예시 불러오기</button><button class="button button-dark" id="generate" type="button">결과 만들기</button></div><p class="tool-status" id="tool-status" role="status">개인정보가 포함된 원문 일기는 붙여 넣지 마세요.</p><div class="generated-result" id="generated-result" hidden></div></div>
       </div>
     </section>
 
-    <section class="integrity section-shell" aria-labelledby="integrity-title">
-      <div class="integrity-box"><p class="eyebrow">AI · AUTHOR JUDGMENT</p><h2 id="integrity-title">세 줄의 제작 원칙</h2><div class="integrity-grid"><p><b>AI에게 맡긴 일</b>문헌 구조화, 다국어 표현, 정적 웹 코드 초안과 후보 문장 계산을 도왔습니다.</p><p><b>내가 판단한 일</b>실제 경험의 사실 여부, 날짜·역량 연결, 공개 범위와 지원에 사용할 문장을 결정합니다.</p><p><b>따르지 않은 제안</b>실제 기록이 없는 수치를 만들거나 치료 효과를 주장하는 제안은 사용하지 않았습니다.</p></div><p class="privacy-note">이 사이트는 로그인·댓글·방문자 통계를 사용하지 않습니다. 다른 사람의 실명·연락처·비밀값은 공개하지 않습니다.</p></div>
-    </section>
   </main>
 
   <footer class="site-footer"><div><strong>문경구</strong><span>함께 끝까지 완주하는 엔지니어</span></div><a href="#top">처음으로 ↑</a><small>Assignment 12 · 공개 포트폴리오</small></footer>
