@@ -15,7 +15,7 @@ GitHub Pages로 배포된 정적 사이트이며, 로그인·댓글·방문자 �
 | BRA-C01–C04 | 첫 화면과 `이야기` 섹션의 날짜별 성장 서사 |
 | BRA-C05 | `기록` 섹션과 `새 기록` 도구의 출처 표시 |
 | BRA-C06 | `대표작` 섹션의 논문 링크와 앱 예정 자리 |
-| BRA-C07–C08 | `문서` 섹션 및 `docs/` 폴더 |
+| BRA-C07–C08 | 저장소의 `docs/` 폴더와 제출용 문서 |
 | BRA-C09 | `device/`의 결정적 갱신 스크립트와 README |
 | BRA-C10–C13 | 개인정보 안내, AI·연구자 판단 세 줄, 공개 접근 구조 |
 
@@ -24,9 +24,10 @@ GitHub Pages로 배포된 정적 사이트이며, 로그인·댓글·방문자 �
 ## 파일 구조
 
 ```text
-index.html                  자기소개 사이트 본문
+index.html                  포트폴리오 본문
+self-introduction.html      자기소개서 전문 읽기 페이지
 style.css                   반응형·인쇄용 디자인
-script.js                   CSV 입력 도구와 언어 전환
+script.js                   CSV 입력 도구
 docs/                       이력서·자기소개서·경력기술서
 device/                     새 기록 갱신 장치와 샘플 데이터
 ```
