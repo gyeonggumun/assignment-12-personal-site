@@ -19,7 +19,6 @@ const generateButton = document.querySelector('#generate');
 const status = document.querySelector('#tool-status');
 const result = document.querySelector('#generated-result');
 const metricGrid = document.querySelector('#metric-grid');
-const langToggle = document.querySelector('#lang-toggle');
 
 function splitCSV(line) {
   const fields = [];
@@ -101,12 +100,4 @@ exampleButton?.addEventListener('click', () => {
 generateButton?.addEventListener('click', () => {
   try { renderRecords(parseCSV(input.value)); }
   catch (error) { result.hidden = true; status.textContent = error.message; }
-});
-
-langToggle?.addEventListener('click', () => {
-  const english = document.documentElement.lang === 'en';
-  document.documentElement.lang = english ? 'ko' : 'en';
-  langToggle.textContent = english ? 'EN' : 'KO';
-  langToggle.setAttribute('aria-label', english ? 'Switch to English' : '한국어로 전환');
-  status.textContent = english ? 'The tool calculates locally. Replace the demo data with your verified 13-week records.' : '개인정보가 포함된 원문 일기는 붙여 넣지 마세요.';
 });
