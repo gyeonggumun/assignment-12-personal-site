@@ -13,6 +13,37 @@ const exampleCSV = `week,date,attendance,ritual,submission,evidence
 12,2026-07-20,1,1,1,먼저 질문하고 설명
 13,2026-07-27,1,1,1,제출 현황 점검`;
 
+// 2026-09-14 기준 공개용 요약. 원문 일기와 동료 정보는 저장하지 않습니다.
+const publishedRitual = {
+  asOf: '2026-09-14',
+  days: [
+    { date: '2026-08-11', complete: true, highlight: '서로 이야기 할 때 다른 행동 하지 않고 경청해주기' },
+    { date: '2026-08-12', complete: true, highlight: '첫 바이브 코딩에서 어려운 부분을 함께 이야기하며 해결할 수 있는 길을 만들었습니다.' },
+    { date: '2026-08-13', complete: true, highlight: '약속 시간보다 약 10분 일찍 도착해 준비하는 행동을 이어 갔습니다.' },
+    { date: '2026-08-14', complete: true, highlight: '쉬는 시간에 조원과 동료에게 먼저 인사를 건네고 이야기하는 시간을 만들었습니다.' },
+    { date: '2026-08-18', complete: true, highlight: '팀 활동에서 긍정적인 의견을 제시하고 팀원을 긍정적인 방향으로 이끌었습니다.' },
+    { date: '2026-08-19', complete: true, highlight: '시간이 날 때 심호흡으로 컨디션을 관리하며 긍정적인 마음을 유지했습니다.' },
+    { date: '2026-08-20', complete: true, highlight: '쉬는 시간마다 충분히 쉬며 머리가 복잡해지지 않도록 관리했습니다.' },
+    { date: '2026-08-21', complete: true, highlight: '쉬는 시간에 휴식하며 멘탈을 관리했습니다.' },
+    { date: '2026-08-24', complete: true, highlight: '쉬는 시간마다 잠깐씩 쉬며 컨디션을 회복했습니다.' },
+    { date: '2026-08-25', complete: true, highlight: '쉬는 시간마다 명상하며 컨디션과 멘탈을 관리했습니다.' },
+    { date: '2026-08-26', complete: true, highlight: '쉬는 시간마다 멘탈 관리를 위해 잘 쉬었습니다.' },
+    { date: '2026-08-27', complete: true, highlight: '뇌를 쉬게 하고 멘탈을 관리해 긍정적인 마음가짐을 만들었습니다.' },
+    { date: '2026-08-28', complete: true, highlight: '피로를 풀기 위해 쉬는 시간에 잠깐씩 휴식했습니다.' },
+    { date: '2026-08-31', complete: true, highlight: '쉬는 시간마다 휴식을 취해 긍정적인 마음을 유지했습니다.' },
+    { date: '2026-09-01', complete: true, highlight: '멘탈 관리를 위해 쉬는 시간에 잠을 자고 휴식했습니다.' },
+    { date: '2026-09-02', complete: true, highlight: '컨디션에 따라 쉬거나 과제를 진행하며 시간을 효율적으로 사용했습니다.' },
+    { date: '2026-09-03', complete: true, highlight: '컨디션이 좋지 않으면 쉬고, 시간이 날 때 과제를 하며 시간을 관리했습니다.' },
+    { date: '2026-09-04', complete: true, highlight: '피로를 풀고 멘탈이 흔들리는 상황을 줄이도록 노력했습니다.' },
+    { date: '2026-09-07', complete: true, highlight: '휴식으로 컨디션을 회복한 뒤 작업하며 멘탈과 시간을 조절했습니다.' },
+    { date: '2026-09-08', complete: true, highlight: '쉬는 시간마다 휴식을 취해 멘탈 관리에 신경 썼습니다.' },
+    { date: '2026-09-09', complete: true, highlight: '쉬는 시간에 쉬고, 시간이 날 때 과제를 하며 시간과 컨디션을 함께 관리했습니다.' },
+    { date: '2026-09-10', complete: true, highlight: '쉬는 시간에 휴식하고 컨디션을 관리하며 과제를 조금씩 진행했습니다.' },
+    { date: '2026-09-11', complete: true, highlight: '쉬는 시간에 질문 내용을 정리하고 충분히 쉬었습니다.' },
+    { date: '2026-09-14', complete: false, highlight: '휴식으로 멘탈을 관리한 뒤 시간이 날 때 과제를 진행하고 있습니다.' },
+  ],
+};
+
 const input = document.querySelector('#records-input');
 const fileInput = document.querySelector('#records-file');
 const exampleButton = document.querySelector('#load-example');
@@ -20,6 +51,16 @@ const generateButton = document.querySelector('#generate');
 const status = document.querySelector('#tool-status');
 const result = document.querySelector('#generated-result');
 const metricGrid = document.querySelector('#metric-grid');
+
+function renderPublishedRitual() {
+  const timeline = document.querySelector('#ritual-timeline');
+  if (!timeline) return;
+  timeline.innerHTML = publishedRitual.days.map((day) => {
+    const date = day.date.replaceAll('-', '.');
+    const statusLabel = day.complete ? '완료' : '진행 중';
+    return `<article class="log-row${day.complete ? '' : ' log-row-current'}"><div class="log-date"><time datetime="${escapeHTML(day.date)}">${date}</time><span class="log-status">${statusLabel}</span></div><p>${escapeHTML(day.highlight)}</p></article>`;
+  }).join('');
+}
 
 function splitCSV(line) {
   const fields = [];
@@ -144,3 +185,5 @@ generateButton?.addEventListener('click', () => {
   try { renderRecords(parseInput(input.value)); }
   catch (error) { result.hidden = true; status.textContent = error.message; }
 });
+
+renderPublishedRitual();
