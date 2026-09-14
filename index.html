@@ -11,7 +11,7 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="문경구 포트폴리오 첫 화면">MK<span>.</span></a>
+    <a class="brand" href="#top" aria-label="문경구 포트폴리오 첫 화면">MG<span>.</span></a>
     <nav aria-label="주요 메뉴">
       <a href="#story">이야기</a>
       <a href="#evidence">기록</a>
@@ -62,7 +62,7 @@
         <div class="metric-grid" id="metric-grid">
           <article class="metric-card"><span class="metric-value">입력 대기</span><h3>회복탄력성</h3><p>출처: 내 리추얼 기록</p></article>
           <article class="metric-card"><span class="metric-value">입력 대기</span><h3>과제지속력</h3><p>출처: 내 제출 현황</p></article>
-          <article class="metric-card metric-card-accent"><span class="metric-value">13주</span><h3>기록 범위</h3><p>출처: 내 출석 기록 · 입력 기간</p></article>
+          <article class="metric-card metric-card-accent"><span class="metric-value">입력 대기</span><h3>기록 범위</h3><p>출처: 업로드 파일 · CSV 또는 JSON</p></article>
         </div>
         <div class="evidence-pair"><span class="pair-label">장면과 숫자의 짝</span><p><strong>2026년 5월 KVM 오류</strong>를 만났을 때 문제를 작은 단위로 나누어 해결했습니다. 실제 기록이 연결되면 이 장면 옆에 “13주 중 ○주 루틴 기록”처럼 확인 가능한 수치를 함께 표시합니다.</p></div>
       </div>
@@ -89,8 +89,8 @@
     <section class="updater section-shell" id="updater" aria-labelledby="updater-title">
       <div class="section-heading"><p class="eyebrow">05 · KEEP WRITING</p><h2 id="updater-title">새 기록을 넣으면<br>사이트가 다시 씁니다</h2></div>
       <div class="updater-content">
-        <div class="updater-copy"><p class="section-lead">리추얼 기록·과제 목록·출석 숫자를 한 번에 붙여 넣으세요. 브라우저 안에서만 계산하며, 같은 입력은 언제나 같은 숫자와 문단 후보를 만듭니다. 승인하기 전에는 사이트 본문을 바꾸지 않습니다.</p><ol class="steps"><li><b>CSV 입력</b><span>week, attendance, ritual, submission 열을 사용합니다.</span></li><li><b>결과 생성</b><span>출석률·기록률·제출률과 역량별 후보를 계산합니다.</span></li><li><b>검토 후 반영</b><span>날짜·근거를 확인한 문장만 문서에 옮깁니다.</span></li></ol></div>
-        <div class="tool-panel"><label for="records-input">13주 기록 CSV</label><textarea id="records-input" rows="8" spellcheck="false" placeholder="week,attendance,ritual,submission,evidence\n1,1,1,0,환경 세팅\n2,1,1,1,오류 로그 분석"></textarea><div class="tool-actions"><button class="button button-primary" id="load-example" type="button">예시 불러오기</button><button class="button button-dark" id="generate" type="button">결과 만들기</button></div><p class="tool-status" id="tool-status" role="status">개인정보가 포함된 원문 일기는 붙여 넣지 마세요.</p><div class="generated-result" id="generated-result" hidden></div></div>
+        <div class="updater-copy"><p class="section-lead">리추얼 기록·과제 목록·출석 숫자를 CSV로 붙여 넣거나, 리추얼 앱에서 내보낸 JSON 파일을 선택하세요. 브라우저 안에서만 계산하며, 같은 입력은 언제나 같은 숫자와 문단 후보를 만듭니다. JSON에서는 날짜와 기록 완료 여부만 읽고 동료 관련 원문과 이름은 사용하지 않습니다.</p><ol class="steps"><li><b>CSV 또는 JSON 입력</b><span>13주 표 형식이나 ritual-history JSON을 사용합니다.</span></li><li><b>결과 생성</b><span>출석률·기록률·제출률과 역량별 후보를 계산합니다.</span></li><li><b>검토 후 반영</b><span>날짜·근거를 확인한 문장만 문서에 옮깁니다.</span></li></ol></div>
+        <div class="tool-panel"><label for="records-input">기록 내용 붙여넣기 (CSV 또는 JSON)</label><textarea id="records-input" rows="8" spellcheck="false" placeholder="CSV: week,date,attendance,ritual,submission,evidence\n1,2026-05-04,1,1,0,환경 세팅"></textarea><label class="file-label" for="records-file">또는 기록 파일 선택</label><input id="records-file" type="file" accept=".json,.csv,application/json,text/csv"><div class="tool-actions"><button class="button button-primary" id="load-example" type="button">CSV 예시 불러오기</button><button class="button button-dark" id="generate" type="button">결과 만들기</button></div><p class="tool-status" id="tool-status" role="status">개인정보가 포함된 원문 일기는 붙여 넣지 마세요.</p><div class="generated-result" id="generated-result" hidden></div></div>
       </div>
     </section>
 
