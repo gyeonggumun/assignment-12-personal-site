@@ -6,6 +6,7 @@ import SiteHeader from './components/SiteHeader';
 import StorySection from './components/StorySection';
 import WorksSection from './components/WorksSection';
 import DocumentsSection from './components/DocumentsSection';
+import UpdaterSection from './components/UpdaterSection';
 
 const observedSectionIds = ['story', 'evidence', 'works', 'documents', 'updater'];
 
@@ -53,6 +54,7 @@ function App() {
         <EvidenceSection />
         <WorksSection />
         <DocumentsSection />
+        <UpdaterSection />
       </main>
       <SiteFooter />
     </div>
