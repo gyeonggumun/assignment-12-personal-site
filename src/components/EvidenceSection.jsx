@@ -42,14 +42,6 @@ export default function EvidenceSection() {
           <article className="log-summary-card"><span>{completionRate}%</span><h3>완료율</h3><p>완료 {completedDays}일 / 전체 {totalDays}일</p></article>
           <article className="log-summary-card log-summary-card-accent"><span>24일</span><h3>마감 기록</h3><p>모든 날짜의 회고를 남김</p></article>
         </div>
-        <div className="ritual-timeline" aria-label="리추얼 날짜별 기록">
-          {ritualHistory.map(([date, complete, highlight]) => (
-            <article className={`log-row${complete ? '' : ' log-row-current'}`} key={date}>
-              <div className="log-date"><time dateTime={date.replaceAll('.', '-')}>{date}</time><span className="log-status">{complete ? '완료' : '진행 중'}</span></div>
-              <p>{highlight}</p>
-            </article>
-          ))}
-        </div>
       </section>
     </>
   );
