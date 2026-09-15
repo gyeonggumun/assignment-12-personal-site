@@ -14,6 +14,7 @@
   --accent-soft: #e2edff;
   --violet: #7560e9;
   --orange: #e9824d;
+  --works-bg: #18263d;
   --shadow: 0 24px 70px rgba(31, 53, 90, 0.08);
   --radius-lg: 28px;
   --radius-md: 18px;
@@ -30,6 +31,7 @@
   --line: #2d3b50;
   --accent: #74a9ff;
   --accent-soft: #1c355d;
+  --works-bg: #090f1a;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
 }
 
@@ -160,7 +162,7 @@ a { color: inherit; }
 .log-row-current .log-status { color: var(--accent); background: var(--accent-soft); }
 .log-row p { margin: 0; color: var(--muted); font-size: 0.77rem; line-height: 1.55; }
 
-.works { background: var(--ink); }
+.works { background: var(--works-bg); }
 .works .section-heading h2, .works .section-heading .section-lead { color: #fff; }
 .works .section-heading .eyebrow { color: #8fb8ff; }
 .work-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 14px; margin-top: 62px; }
