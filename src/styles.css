@@ -153,14 +153,6 @@ a { color: inherit; }
 .log-summary-card p { margin: 0; color: var(--muted); font-size: 0.7rem; }
 .log-summary-card-accent { border-color: transparent; background: var(--accent); }
 .log-summary-card-accent span, .log-summary-card-accent h3, .log-summary-card-accent p { color: #fff; }
-.ritual-timeline { border-top: 1px solid var(--line); }
-.log-row { display: grid; grid-template-columns: 170px 1fr; gap: 2rem; padding: 15px 0; border-bottom: 1px solid var(--line); }
-.log-row-current { color: var(--accent); }
-.log-date { display: flex; align-items: center; gap: 10px; }
-.log-date time { color: var(--muted); font-size: 0.7rem; font-weight: 850; }
-.log-status { border-radius: 999px; padding: 4px 7px; color: var(--muted); background: var(--surface-soft); font-size: 0.56rem; font-weight: 900; }
-.log-row-current .log-status { color: var(--accent); background: var(--accent-soft); }
-.log-row p { margin: 0; color: var(--muted); font-size: 0.77rem; line-height: 1.55; }
 
 .works { background: var(--works-bg); }
 .works .section-heading h2, .works .section-heading .section-lead { color: #fff; }
@@ -267,7 +259,6 @@ a { color: inherit; }
   .scene-copy { grid-column: 2; }
   .evidence-panel, .tool-panel { padding: 16px; }
   .evidence-pair { grid-template-columns: 1fr; gap: 1rem; padding: 17px; }
-  .log-row { grid-template-columns: 1fr; gap: 8px; }
   .work-card { min-height: 390px; padding: 22px; }
   .work-card-body { right: 22px; bottom: 22px; left: 22px; }
   .work-card h3 { font-size: 2.2rem; }
