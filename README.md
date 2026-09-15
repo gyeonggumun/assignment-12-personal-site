@@ -6,7 +6,7 @@
 
 결과물 URL: https://gyeonggumun.github.io/assignment-12-personal-site/
 
-GitHub Pages로 배포된 정적 사이트이며, 로그인·댓글·방문자 통계를 넣지 않았습니다. Vercel은 GitHub 연동 승인이 필요한 선택 배포 경로로 남겨 두었습니다.
+React와 Vite로 구성한 정적 사이트이며, 로그인·댓글·방문자 통계를 넣지 않았습니다. GitHub Pages 배포는 `.github/workflows/deploy-pages.yml`이 `main` 푸시 때 자동으로 실행합니다.
 
 ## 체크리스트 대응
 
@@ -24,17 +24,27 @@ GitHub Pages로 배포된 정적 사이트이며, 로그인·댓글·방문자 �
 ## 파일 구조
 
 ```text
-index.html                  포트폴리오 본문
+index.html                  Vite 진입 HTML
+src/App.jsx                 React 앱 셸과 섹션 조합
+src/components/             헤더·히어로·기록·작품·업데이터 컴포넌트
+src/data.js                 공개 콘텐츠와 리추얼 기록 데이터
+src/utils/records.js        CSV·마스킹 JSON 결정적 계산 로직
+src/styles.css              반응형·다크 모드 디자인 시스템
 self-introduction.html      자기소개서 전문 읽기 페이지
-style.css                   반응형·인쇄용 디자인
-script.js                   CSV·JSON 입력 도구
 docs/                       이력서·자기소개서·경력기술서
 device/                     새 기록 갱신 장치와 샘플 데이터
 ```
 
 ## 로컬에서 확인
 
-별도 설치 없이 `index.html`을 브라우저로 열면 됩니다. 첫 화면의 `오늘까지의 기록 흐름`에서 공개된 JSON 요약을 확인하고, `새 기록` 섹션에서 `예시 불러오기` 또는 파일 선택을 누른 뒤 `결과 만들기`를 선택하면 추가 입력도 브라우저 안에서 확인할 수 있습니다.
+Node.js 18 이상에서 다음 명령으로 실행합니다.
+
+```text
+npm install
+npm run dev
+```
+
+배포 번들은 `npm run build`, 결과 확인은 `npm run preview`로 실행합니다. 첫 화면의 `오늘까지의 기록 흐름`에서 공개된 JSON 요약을 확인하고, `새 기록` 섹션에서 `예시 불러오기` 또는 파일 선택을 누른 뒤 `결과 만들기`를 선택하면 추가 입력도 브라우저 안에서 확인할 수 있습니다.
 
 ## 기록 갱신 장치 실행
 
