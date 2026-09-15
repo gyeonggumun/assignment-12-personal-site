@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-const downloadableDocuments = ['resume.md', 'self-introduction.md', 'career-description.md'];
+const downloadableDocuments = ['resume.md', 'career-description.md'];
 
 function includeDownloadableDocuments() {
   return {
