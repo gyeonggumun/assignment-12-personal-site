@@ -11,7 +11,7 @@ export default function HeroSection() {
         <p className="hero-intro">시스템의 오류를 혼자 끌어안기보다 함께 나눌 때 더 빠르고 정확하게 풀린다는 사실을, 실제 구축과 협업의 장면으로 증명해 왔습니다.</p>
         <div className="hero-actions">
           <a className="button button-primary" href="#story">3분 이야기 읽기 <span aria-hidden="true">↓</span></a>
-          <a className="text-link" href="self-introduction.html">자기소개서 읽기 <span aria-hidden="true">↗</span></a>
+          <a className="text-link" href="#documents">자기소개서 다운로드 <span aria-hidden="true">↓</span></a>
         </div>
         <div className="hero-meta">
           <span>REACT + VITE</span>
