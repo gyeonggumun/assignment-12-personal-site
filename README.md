@@ -4,9 +4,9 @@
 
 ## 공개 사이트
 
-결과물 URL: https://gyeonggumun.github.io/assignment-12-personal-site/
+결과물 URL: https://assignment-12-personal-site-gyeonggumuns-projects.vercel.app/
 
-React와 Vite로 구성한 정적 사이트이며, 로그인·댓글·방문자 통계를 넣지 않았습니다. GitHub Pages 배포는 `.github/workflows/deploy-pages.yml`이 `main` 푸시 때 자동으로 실행합니다.
+React와 Vite로 구성한 정적 사이트이며, 로그인·댓글·방문자 통계를 넣지 않았습니다. GitHub 저장소의 `main` 브랜치에 푸시하면 연결된 Vercel 프로젝트가 자동으로 배포합니다.
 
 ## 체크리스트 대응
 
@@ -19,7 +19,7 @@ React와 Vite로 구성한 정적 사이트이며, 로그인·댓글·방문자 
 | BRA-C09 | `device/`의 결정적 갱신 스크립트와 README |
 | BRA-C10–C13 | 개인정보 안내, AI·연구자 판단 세 줄, 공개 접근 구조 |
 
-`ritual-history-2026-09-14.json`에서 오늘(2026-09-14)까지의 24일 기록을 공개용으로 요약해 페이지에 포함했습니다. 완료 23일, 진행 중 1일로 리추얼 완료율은 96%이며, 날짜·완료 상태·개인 실천 하이라이트만 표시합니다. 동료 이름과 원문 전체는 공개하지 않습니다. 기존 `새 기록` 도구에서는 검증된 CSV 또는 마스킹된 JSON을 추가로 불러와 임시 지표와 문단 후보를 계산할 수 있습니다. 이 JSON에는 출석·제출 값이 없으므로 해당 지표는 입력 대기로 유지됩니다.
+`ritual-history-2026-09-14.json`에서 오늘(2026-09-14)까지의 24일 리추얼 기록을 공개용으로 요약해 페이지에 포함했습니다. 현재 데이터에는 출석·제출 값이 없으므로 해당 지표는 입력 대기로 표시하며, 검증된 13주 CSV를 추가한 뒤 실제 수치로 교체합니다. 동료 이름과 원문 전체는 공개하지 않습니다. `새 기록` 도구에서는 검증된 CSV 또는 마스킹된 JSON을 불러와 지표와 문단 후보를 계산할 수 있습니다.
 
 ## 파일 구조
 
@@ -32,6 +32,8 @@ src/utils/records.js        CSV·마스킹 JSON 결정적 계산 로직
 src/styles.css              반응형·다크 모드 디자인 시스템
 self-introduction.html      자기소개서 전문 읽기 페이지
 docs/                       이력서·자기소개서·경력기술서
+docs/assignment-12-submission-checklist.pdf
+                              제출 확인 문서 PDF
 device/                     새 기록 갱신 장치와 샘플 데이터
 ```
 
@@ -65,4 +67,4 @@ node update-site.js sample-records.csv output
 
 ## 문서
 
-`docs/`의 Markdown 파일은 지원처에 맞춰 연락 수단과 실제 13주 수치를 최종 확인한 뒤 PDF 또는 문서 파일로 변환해 제출합니다. 현재 제공된 자기소개서에는 공개 가능한 연락 수단이 없으므로 사이트에 교체 안내를 남겼습니다.
+`docs/`의 문서는 지원처에 맞춰 공개 연락 수단과 실제 프로젝트 기간·역할·13주 수치를 최종 확인한 뒤 제출합니다. 제출 전에는 `docs/checklist-verification.md`의 3단계 확인 방법과 캡처 목록을 함께 확인합니다.
