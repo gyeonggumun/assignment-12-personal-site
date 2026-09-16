@@ -1,0 +1,33 @@
+{
+  "student": "문경구",
+  "peerNamesMasked": true,
+  "publicSummary": true,
+  "days": [
+    { "date": "2026-08-11", "ritual": 1, "evidence": "서로 이야기할 때 다른 행동을 하지 않고 경청해주기" },
+    { "date": "2026-08-12", "ritual": 1, "evidence": "어려운 부분을 함께 이야기하며 해결할 수 있는 길을 만들기" },
+    { "date": "2026-08-13", "ritual": 1, "evidence": "약속 시간보다 약 10분 먼저 도착해 준비하기" },
+    { "date": "2026-08-14", "ritual": 1 },
+    { "date": "2026-08-18", "ritual": 1 },
+    { "date": "2026-08-19", "ritual": 1 },
+    { "date": "2026-08-20", "ritual": 1 },
+    { "date": "2026-08-21", "ritual": 1 },
+    { "date": "2026-08-24", "ritual": 1 },
+    { "date": "2026-08-25", "ritual": 1 },
+    { "date": "2026-08-26", "ritual": 1 },
+    { "date": "2026-08-27", "ritual": 1 },
+    { "date": "2026-08-28", "ritual": 1 },
+    { "date": "2026-08-31", "ritual": 1 },
+    { "date": "2026-09-01", "ritual": 1 },
+    { "date": "2026-09-02", "ritual": 1 },
+    { "date": "2026-09-03", "ritual": 1 },
+    { "date": "2026-09-04", "ritual": 1 },
+    { "date": "2026-09-07", "ritual": 1 },
+    { "date": "2026-09-08", "ritual": 1 },
+    { "date": "2026-09-09", "ritual": 1 },
+    { "date": "2026-09-10", "ritual": 1 },
+    { "date": "2026-09-11", "ritual": 1 },
+    { "date": "2026-09-14", "ritual": 1 },
+    { "date": "2026-09-15", "ritual": 1 },
+    { "date": "2026-09-16", "ritual": 1 }
+  ]
+}

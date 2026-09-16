@@ -1,3 +1,5 @@
+import ritualHistoryPayload from './data/ritual-history-2026-09-16.json';
+
 export const navItems = [
   { id: 'story', label: '이야기' },
   { id: 'evidence', label: '기록' },
@@ -47,32 +49,20 @@ export const storyScenes = [
   },
 ];
 
-export const ritualHistory = [
-  ['2026.08.11', true, '서로 이야기할 때 다른 행동을 하지 않고 경청하기'],
-  ['2026.08.12', true, '첫 바이브 코딩에서 어려운 부분을 함께 이야기하며 해결의 길 만들기'],
-  ['2026.08.13', true, '약속 시간보다 약 10분 일찍 도착해 준비하기'],
-  ['2026.08.14', true, '쉬는 시간에 조원과 동료에게 먼저 인사하고 이야기하기'],
-  ['2026.08.18', true, '팀 활동에서 긍정적인 의견을 제시하고 방향 이끌기'],
-  ['2026.08.19', true, '심호흡으로 컨디션을 관리하며 긍정적인 마음 유지하기'],
-  ['2026.08.20', true, '쉬는 시간마다 충분히 쉬며 머리가 복잡해지지 않게 관리하기'],
-  ['2026.08.21', true, '쉬는 시간에 휴식하며 멘탈 관리하기'],
-  ['2026.08.24', true, '쉬는 시간마다 잠깐씩 쉬며 컨디션 회복하기'],
-  ['2026.08.25', true, '쉬는 시간마다 명상하며 컨디션과 멘탈 관리하기'],
-  ['2026.08.26', true, '쉬는 시간마다 멘탈 관리를 위해 잘 쉬기'],
-  ['2026.08.27', true, '뇌를 쉬게 하고 멘탈을 관리해 긍정적인 마음가짐 만들기'],
-  ['2026.08.28', true, '피로를 풀기 위해 쉬는 시간에 잠깐씩 휴식하기'],
-  ['2026.08.31', true, '쉬는 시간마다 휴식을 취해 긍정적인 마음 유지하기'],
-  ['2026.09.01', true, '멘탈 관리를 위해 쉬는 시간에 잠을 자고 휴식하기'],
-  ['2026.09.02', true, '컨디션에 따라 쉬거나 과제를 진행하며 시간 효율적으로 사용하기'],
-  ['2026.09.03', true, '컨디션이 좋지 않으면 쉬고, 시간이 날 때 과제하기'],
-  ['2026.09.04', true, '피로를 풀고 멘탈이 흔들리는 상황 줄이기'],
-  ['2026.09.07', true, '휴식으로 컨디션을 회복한 뒤 작업하며 멘탈과 시간 조절하기'],
-  ['2026.09.08', true, '쉬는 시간마다 휴식을 취해 멘탈 관리하기'],
-  ['2026.09.09', true, '쉬고, 시간이 날 때 과제를 하며 시간과 컨디션 함께 관리하기'],
-  ['2026.09.10', true, '휴식하고 컨디션을 관리하며 과제를 조금씩 진행하기'],
-  ['2026.09.11', true, '쉬는 시간에 질문 내용을 정리하고 충분히 쉬기'],
-  ['2026.09.14', true, '휴식으로 멘탈을 관리한 뒤 시간이 날 때 과제를 진행하기'],
-];
+function extractRitualEvidence(day) {
+  if (day.evidence) return day.evidence;
+  const lines = [...(Array.isArray(day.open) ? day.open : []), ...(Array.isArray(day.close) ? day.close : [])];
+  const preferred = lines.find((line) => /오늘의 첫 행동/.test(line)) || lines.find((line) => /강점 행동/.test(line)) || lines.find((line) => /그 결과·알게 된 점/.test(line));
+  return preferred ? preferred.replace(/^[^:]+:\s*/, '') : '';
+}
+
+export const ritualHistory = ritualHistoryPayload.days.map((day) => [
+  day.date.replace(/-/g, '.'),
+  day.ritual === 1 || (Array.isArray(day.close) && day.close.length > 0),
+  extractRitualEvidence(day),
+]);
+
+export const defaultRitualPayload = ritualHistoryPayload;
 
 export const documentLinks = [
   { number: '01', title: '이력서', description: '핵심 역량과 과제 경험을 한 장에 정리했습니다.', href: 'docs/resume.pdf', downloadName: '이력서.pdf' },

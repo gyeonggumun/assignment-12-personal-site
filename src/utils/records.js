@@ -59,6 +59,7 @@ export function parseCSV(text) {
 }
 
 function extractJSONEvidence(day) {
+  if (day.evidence) return day.evidence;
   const lines = [...(Array.isArray(day.open) ? day.open : []), ...(Array.isArray(day.close) ? day.close : [])];
   const preferred = lines.find((line) => /오늘의 첫 행동/.test(line)) || lines.find((line) => /강점 행동/.test(line)) || lines.find((line) => /그 결과·알게 된 점/.test(line));
   return preferred ? preferred.replace(/^[^:]+:\s*/, '') : '기록 내용 확인';
@@ -74,7 +75,7 @@ export function parseRitualJSON(text) {
     week: index + 1,
     date: day.date || '',
     attendance: null,
-    ritual: Array.isArray(day.close) && day.close.length > 0 ? 1 : 0,
+    ritual: day.ritual === 1 || (Array.isArray(day.close) && day.close.length > 0) ? 1 : 0,
     submission: null,
     evidence: extractJSONEvidence(day),
   }));
@@ -86,6 +87,22 @@ export function parseInput(text) {
   return trimmed.startsWith('{') || trimmed.startsWith('[')
     ? { records: parseRitualJSON(trimmed), source: 'Ritual JSON' }
     : { records: parseCSV(trimmed), source: 'CSV' };
+}
+
+export function recordKey(record) {
+  return record.date || `week:${record.week}`;
+}
+
+export function appendOnlyRecords(existing, incoming) {
+  const seen = new Set(existing.map(recordKey));
+  const additions = incoming.filter((record) => {
+    const key = recordKey(record);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  return [...existing, ...additions];
 }
 
 function percentage(value, total) {
@@ -102,7 +119,7 @@ export function summarizeRecords(records, source) {
 
   return {
     total: records.length,
-    unit: source === 'Ritual JSON' ? '일' : '주',
+    unit: source.includes('Ritual JSON') ? '일' : '주',
     source,
     attendance: metric('attendance'),
     ritual: metric('ritual'),
