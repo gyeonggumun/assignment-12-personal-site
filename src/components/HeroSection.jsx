@@ -1,6 +1,10 @@
-import { skills } from '../data';
+import { ritualHistory, skills } from '../data';
 
 export default function HeroSection() {
+  const completedDays = ritualHistory.filter(([, complete]) => complete).length;
+  const totalDays = ritualHistory.length;
+  const completionRate = Math.round((completedDays / totalDays) * 100);
+
   return (
     <section className="hero section-shell" id="top" aria-labelledby="hero-title">
       <div className="hero-copy">
@@ -15,7 +19,7 @@ export default function HeroSection() {
         </div>
         <div className="hero-meta">
           <span>REACT + VITE</span>
-          <span>GITHUB PAGES</span>
+          <span>VERCEL</span>
           <span>2026</span>
         </div>
       </div>
@@ -27,7 +31,7 @@ export default function HeroSection() {
           <strong>Observe<br />→ Break down<br />→ Finish together</strong>
           <span className="core-mark">MG.</span>
         </div>
-        <div className="floating-card floating-card-top"><span>RITUAL LOG</span><strong>23<span>/24</span></strong><small>96% complete</small></div>
+        <div className="floating-card floating-card-top"><span>RITUAL LOG</span><strong>{completedDays}<span>/{totalDays}</span></strong><small>{completionRate}% complete</small></div>
         <div className="floating-card floating-card-bottom"><span>FIRST STEP</span><strong>+10<span> min</span></strong><small>early arrival routine</small></div>
       </div>
       <aside className="hero-skills" aria-label="핵심 역량 요약">
