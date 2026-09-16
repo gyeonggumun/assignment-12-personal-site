@@ -89,6 +89,7 @@ a { color: inherit; }
 .hero-contact span { color: var(--accent); font-size: 0.62rem; letter-spacing: 0.14em; }
 .hero-contact a { color: inherit; text-underline-offset: 3px; }
 .hero-line { max-width: 640px; margin: clamp(22px, 4vw, 32px) 0 18px; color: var(--ink); font-size: clamp(1.05rem, 2.2vw, 1.7rem); font-weight: 800; letter-spacing: -0.055em; line-height: 1.5; }
+.hero-line, .hero-intro, .section-lead, .lead-paragraph, .scene-copy h3, .scene-copy p, .skill-summary strong, .skill-summary em, .evidence-pair strong, .evidence-pair p, .ritual-excerpts span, .log-summary-card h3, .log-summary-card p, .work-card h3, .work-card p, .document-card h3, .document-card p, .implementation-note strong, .implementation-note p, .steps b, .steps span { word-break: keep-all; overflow-wrap: break-word; }
 .hero-intro { max-width: 600px; margin: 0; color: var(--muted); font-size: clamp(0.86rem, 1.5vw, 0.98rem); line-height: 1.9; }
 .hero-actions { display: flex; align-items: center; gap: clamp(14px, 3vw, 22px); margin-top: clamp(24px, 4vw, 34px); }
 .hero-meta { display: flex; flex-wrap: wrap; gap: clamp(10px, 2.5vw, 18px); margin-top: clamp(34px, 6vw, 54px); color: var(--muted); font-size: clamp(0.58rem, 1vw, 0.66rem); font-weight: 900; letter-spacing: 0.12em; }
@@ -272,13 +273,13 @@ a { color: inherit; }
   .story-scene { grid-template-columns: 32px 1fr; gap: 10px 13px; }
   .story-scene time { grid-column: 2; grid-row: 1; }
   .scene-copy { grid-column: 2; }
-  .scene-copy h3, .scene-copy p { overflow-wrap: anywhere; }
+  .scene-copy h3, .scene-copy p { overflow-wrap: break-word; }
   .evidence-panel, .tool-panel { padding: 16px; }
   .evidence-pair { grid-template-columns: 1fr; gap: 1rem; padding: 17px; }
   .work-card { min-height: clamp(300px, 100vw, 390px); padding: clamp(18px, 5vw, 22px); }
   .work-card-body { right: clamp(18px, 5vw, 22px); bottom: clamp(18px, 5vw, 22px); left: clamp(18px, 5vw, 22px); }
   .work-card h3 { font-size: clamp(1.75rem, 9vw, 2.2rem); }
-  .work-card p:not(.card-kicker) { overflow-wrap: anywhere; }
+  .work-card p:not(.card-kicker) { overflow-wrap: break-word; }
   .document-card { grid-template-columns: 28px 1fr 16px; min-height: clamp(130px, 42vw, 160px); gap: 8px; }
   .document-card h3 { font-size: clamp(0.88rem, 3vw, 1rem); }
   .result-metrics { grid-template-columns: 1fr; }
