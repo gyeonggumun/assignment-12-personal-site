@@ -11,6 +11,7 @@ export default function HeroSection() {
         <p className="eyebrow">PORTFOLIO <span>·</span> ASSIGNMENT 12</p>
         <p className="hero-kicker"><span className="status-dot" /> AVAILABLE FOR A TEAM THAT BUILDS</p>
         <h1 id="hero-title">문경구</h1>
+        <p className="hero-contact"><span>EMAIL</span><a href="mailto:lion989072@gmail.com">lion989072@gmail.com</a></p>
         <p className="hero-line">문제를 작게 나누고, 먼저 손을 내밀며, 팀과 함께 끝까지 완주하는 사람</p>
         <p className="hero-intro">시스템의 오류를 혼자 끌어안기보다 함께 나눌 때 더 빠르고 정확하게 풀린다는 사실을, 실제 구축과 협업의 장면으로 증명해 왔습니다.</p>
         <div className="hero-actions">

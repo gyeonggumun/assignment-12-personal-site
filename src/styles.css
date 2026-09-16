@@ -85,6 +85,9 @@ a { color: inherit; }
 .hero-kicker { display: flex; align-items: center; gap: 8px; margin: 42px 0 16px; color: var(--muted); font-size: 0.68rem; font-weight: 900; letter-spacing: 0.14em; }
 .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #56bd83; box-shadow: 0 0 0 5px color-mix(in srgb, #56bd83 16%, transparent); }
 .hero h1 { margin: 0; color: var(--ink); font-size: clamp(4.5rem, 13vw, 10.5rem); font-weight: 900; letter-spacing: -0.12em; line-height: 0.85; }
+.hero-contact { display: flex; align-items: center; gap: 10px; margin: 14px 0 0; color: var(--muted); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; }
+.hero-contact span { color: var(--accent); font-size: 0.62rem; letter-spacing: 0.14em; }
+.hero-contact a { color: inherit; text-underline-offset: 3px; }
 .hero-line { max-width: 640px; margin: clamp(22px, 4vw, 32px) 0 18px; color: var(--ink); font-size: clamp(1.05rem, 2.2vw, 1.7rem); font-weight: 800; letter-spacing: -0.055em; line-height: 1.5; }
 .hero-intro { max-width: 600px; margin: 0; color: var(--muted); font-size: clamp(0.86rem, 1.5vw, 0.98rem); line-height: 1.9; }
 .hero-actions { display: flex; align-items: center; gap: clamp(14px, 3vw, 22px); margin-top: clamp(24px, 4vw, 34px); }
@@ -223,6 +226,7 @@ a { color: inherit; }
 .site-footer div { display: flex; align-items: center; gap: 14px; }
 .site-footer strong { color: var(--ink); font-size: 0.82rem; }
 .site-footer span, .site-footer small, .site-footer a { color: var(--muted); font-size: 0.68rem; }
+.site-footer .footer-email { color: var(--accent); text-underline-offset: 3px; }
 .site-footer a { justify-self: center; font-weight: 800; text-decoration: none; }
 .site-footer small { justify-self: end; }
 
