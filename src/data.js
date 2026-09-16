@@ -77,5 +77,5 @@ export const ritualHistory = [
 export const documentLinks = [
   { number: '01', title: '이력서', description: '핵심 역량과 과제 경험을 한 장에 정리했습니다.', href: 'docs/resume.md' },
   { number: '02', title: '자기소개서', description: '한글 PDF 자기소개서를 내려받을 수 있습니다.', href: 'docs/self-introduction.pdf', downloadName: '자기소개서.pdf' },
-  { number: '03', title: '경력기술서', description: '과제별 상황·행동·결과와 연결 역량을 담았습니다.', href: 'docs/career-description.md' },
+  { number: '03', title: '경력기술서', description: '과제별 상황·행동·결과와 연결 역량을 담았습니다.', href: 'docs/career-description.pdf', downloadName: '경력기술서.pdf' },
 ];
