@@ -32,8 +32,6 @@ src/utils/records.js        CSV·마스킹 JSON 결정적 계산 로직
 src/styles.css              반응형·다크 모드 디자인 시스템
 self-introduction.html      자기소개서 전문 읽기 페이지
 docs/                       이력서·자기소개서·경력기술서
-docs/assignment-12-submission-checklist.pdf
-                              제출 확인 문서 PDF
 device/                     새 기록 갱신 장치와 샘플 데이터
 ```
 
