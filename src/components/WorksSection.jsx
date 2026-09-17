@@ -18,12 +18,12 @@ export default function WorksSection() {
         <article className="work-card work-placeholder">
           <div className="work-number">13</div>
           <div className="work-card-body">
-            <p className="card-kicker">APP · RESERVED</p>
-            <h3>긍정적 회고<br />기록 앱</h3>
-            <p>13번 과제 완료 후 연결할 자리입니다. 로그인 없이 개인 기록을 안전하게 남기는 MVP를 설계합니다.</p>
-            <span className="status-chip">제작 예정</span>
+            <p className="card-kicker">APP · LIVE</p>
+            <h3>내일을 여는<br />회고</h3>
+            <p>저녁의 긍정적 사건과 이유를 기록하고, 다음 날 중요한 과제를 시작할 자신감을 점검하는 로컬 우선 React 앱입니다.</p>
+            <a className="arrow-link" href="https://retrospective-that-opens-up-tomorro.vercel.app/" target="_blank" rel="noreferrer">웹앱 열기 <span>↗</span></a>
           </div>
-          <span className="work-corner-mark">+</span>
+          <span className="work-corner-mark">↗</span>
         </article>
       </div>
     </section>
